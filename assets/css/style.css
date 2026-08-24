@@ -340,19 +340,18 @@ main, header, footer{ position:relative; z-index:1; }
 }
 .footer-ig:hover{ color:var(--cream-soft); }
 .footer-share{
-  display:inline-flex; align-items:center; gap:8px;
-  color:var(--gold-soft);
-  background:none; border:0; padding:4px; margin:0; cursor:pointer; font-family:'Jost',sans-serif;
+  display:inline-flex; align-items:center; justify-content:center;
+  color:var(--gold-soft) !important;
+  background:none; border:0; padding:4px; margin:0; cursor:pointer;
+  appearance:none; -webkit-appearance:none;
   transition:color .25s var(--ease);
 }
-.footer-share:hover{ color:var(--cream-soft); }
-.footer-share span{
-  font-size:.8rem; letter-spacing:.05em; max-width:0; overflow:hidden; white-space:nowrap;
-  opacity:0; transition:max-width .3s var(--ease), opacity .2s var(--ease);
-}
-.footer-share.is-copied{ color:var(--cream-soft); }
-.footer-share.is-copied span{ max-width:110px; opacity:1; }
-.footer-location{ font-size:.8rem; letter-spacing:.06em; color:rgba(251,247,239,0.6); margin:2px 0 0; }
+.footer-share:hover{ color:var(--cream-soft) !important; }
+.footer-share .icon-check{ display:none; }
+.footer-share.is-copied .icon-share{ display:none; }
+.footer-share.is-copied .icon-check{ display:block; }
+.footer-share.is-copied{ color:var(--cream-soft) !important; }
+.footer-location{ font-size:.8rem; letter-spacing:.06em; color:var(--gold-soft); margin:2px 0 0; }
 .footer-copy{ font-size:.75rem; color:rgba(251,247,239,0.5); margin:20px 0 0; }
 
 /* ===================================================================

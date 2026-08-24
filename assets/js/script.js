@@ -8,19 +8,15 @@
   /* Footer share button */
   var shareBtn = document.getElementById('shareBtn');
   if (shareBtn) {
-    var shareLabel = shareBtn.querySelector('span');
-    var defaultLabel = shareLabel.textContent;
     var shareUrl = window.location.href.replace(/profile\.html.*$/, '');
 
     var resetTimer;
     function showCopiedFeedback(){
-      shareLabel.textContent = 'Link copied!';
       shareBtn.classList.add('is-copied');
       clearTimeout(resetTimer);
       resetTimer = setTimeout(function(){
-        shareLabel.textContent = defaultLabel;
         shareBtn.classList.remove('is-copied');
-      }, 2000);
+      }, 1800);
     }
 
     shareBtn.addEventListener('click', function(){
