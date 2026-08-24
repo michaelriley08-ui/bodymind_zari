@@ -398,6 +398,11 @@ main, header, footer{ position:relative; z-index:1; }
   .results-inner{ grid-template-columns:1fr; }
   .results-text{ text-align:center; }
 
+  .menu-row{ display:block; }
+  .menu-item{ display:block; white-space:normal; }
+  .menu-dots{ display:none; }
+  .menu-price{ display:block; text-align:right; margin-top:2px; }
+
   .gallery-grid{ grid-template-columns:repeat(2,1fr); gap:16px; }
   .g-item.g-tall{ aspect-ratio:3/4; }
 }
