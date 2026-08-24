@@ -403,6 +403,9 @@ main, header, footer{ position:relative; z-index:1; }
   .results-inner{ grid-template-columns:1fr; }
   .results-text{ text-align:center; }
 
+  .about{ padding-top:66px; }
+  .menu-section{ padding-top:60px; }
+
   .menu-row{ display:block; }
   .menu-item{ display:block; white-space:normal; }
   .menu-dots{ display:none; }
