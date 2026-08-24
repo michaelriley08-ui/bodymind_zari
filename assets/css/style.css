@@ -141,8 +141,9 @@ main, header, footer{ position:relative; z-index:1; }
 .btn-primary{
   background:var(--ink); color:var(--cream-soft);
   box-shadow:var(--shadow-soft);
+  transition:background .25s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease);
 }
-.btn-primary:hover{ transform:translateY(-3px); box-shadow:var(--shadow); }
+.btn-primary:hover{ background:var(--mauve-deep); transform:translateY(-3px); box-shadow:var(--shadow); }
 .btn-ghost{
   border-color:var(--ink); color:var(--ink);
 }
