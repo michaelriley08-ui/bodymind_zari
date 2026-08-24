@@ -335,16 +335,16 @@ main, header, footer{ position:relative; z-index:1; }
 .site-footer{ background:var(--ink); color:var(--cream-soft); padding:60px 32px 30px; }
 .footer-inner{ max-width:1200px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px; }
 .footer-logo .logo-black{ color:var(--cream-soft); }
-.footer-logo .logo-script{ color:var(--mauve); }
+.footer-logo .logo-script{ color:var(--gold-soft); }
 .footer-ig{
   display:inline-flex; align-items:center; gap:8px;
-  font-size:.9rem; letter-spacing:.05em; color:var(--mauve);
+  font-size:.9rem; letter-spacing:.05em; color:var(--gold-soft);
   transition:color .25s var(--ease);
 }
 .footer-ig:hover{ color:var(--cream-soft); }
 .footer-share{
   display:inline-flex; align-items:center; justify-content:center;
-  color:var(--mauve) !important;
+  color:var(--gold-soft) !important;
   background:none; border:0; padding:4px; margin:0; cursor:pointer;
   appearance:none; -webkit-appearance:none;
   transition:color .25s var(--ease);
@@ -354,7 +354,7 @@ main, header, footer{ position:relative; z-index:1; }
 .footer-share.is-copied .icon-share{ display:none; }
 .footer-share.is-copied .icon-check{ display:block; }
 .footer-share.is-copied{ color:var(--cream-soft) !important; }
-.footer-location{ font-size:.8rem; letter-spacing:.06em; color:var(--mauve); margin:2px 0 0; }
+.footer-location{ font-size:.8rem; letter-spacing:.06em; color:var(--gold-soft); margin:2px 0 0; }
 .footer-copy{ font-size:.75rem; color:rgba(251,247,239,0.5); margin:20px 0 0; }
 
 /* ===================================================================
