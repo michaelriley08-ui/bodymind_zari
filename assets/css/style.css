@@ -363,7 +363,7 @@ main, header, footer{ position:relative; z-index:1; }
   .nav-cta{ margin-top:10px; text-align:center; }
   .nav-toggle{ display:flex; }
 
-  .hero-inner{ padding:250px 32px 60px; text-align:center; }
+  .hero-inner{ padding:250px 32px 150px; text-align:center; }
   .hero-text{ display:flex; flex-direction:column; align-items:center; max-width:100%; }
   .hero-actions{ justify-content:center; }
 
