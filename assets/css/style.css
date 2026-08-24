@@ -334,8 +334,8 @@ main, header, footer{ position:relative; z-index:1; }
 =================================================================== */
 .site-footer{ background:var(--ink); color:var(--cream-soft); padding:60px 32px 30px; }
 .footer-inner{ max-width:1200px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px; }
-.footer-logo .logo-black{ color:var(--cream-soft); }
-.footer-logo .logo-script{ color:var(--gold-soft); }
+.footer-logo .logo-black{ color:var(--mauve); }
+.footer-logo .logo-script{ color:var(--mauve); }
 .footer-ig{
   display:inline-flex; align-items:center; gap:8px;
   font-size:.9rem; letter-spacing:.05em; color:var(--gold-soft);
