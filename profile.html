@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — Body Mind Zari</title>
+<meta name="description" content="Manage your Body Mind Zari rewards and book your next appointment.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+
+<div class="bg-decor" aria-hidden="true">
+  <span class="circle c1" data-drift="0.05"></span>
+  <span class="circle c2" data-drift="-0.07"></span>
+  <span class="circle c3" data-drift="0.09"></span>
+  <span class="circle c4" data-drift="-0.05"></span>
+  <span class="circle c5" data-drift="0.06"></span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-black">BodyMind</span><span class="logo-script">Zari</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#menu">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html" class="nav-cta">Log Out</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="account">
+
+  <!-- PROFILE HEADER -->
+  <section class="acct-hero reveal">
+    <div class="acct-hero-inner">
+      <div class="avatar" aria-hidden="true">MR</div>
+      <div class="acct-id">
+        <p class="eyebrow">My Account</p>
+        <h1>Welcome back, Mike.</h1>
+        <p class="acct-email">american.piggy@gmail.com &nbsp;·&nbsp; Member since Jan 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REWARDS -->
+  <section class="rewards reveal">
+    <div class="rewards-card">
+      <div class="rewards-head">
+        <div>
+          <p class="eyebrow">Loyalty Rewards</p>
+          <h2>Buy 5, Get the 6th Free</h2>
+        </div>
+        <p class="rewards-count"><span id="stampCount">3</span> of 5 sessions</p>
+      </div>
+
+      <div class="stamp-row" id="stampRow">
+        <div class="stamp is-filled"><span class="stamp-num">1</span></div>
+        <div class="stamp is-filled"><span class="stamp-num">2</span></div>
+        <div class="stamp is-filled"><span class="stamp-num">3</span></div>
+        <div class="stamp"><span class="stamp-num">4</span></div>
+        <div class="stamp"><span class="stamp-num">5</span></div>
+        <div class="stamp stamp-free">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12v9H4v-9M2 7h20v5H2V7Zm10 14V7M12 7C9.5 7 7 5.5 7 3.5A2.5 2.5 0 0 1 9.5 1C12 1 12 4.5 12 7Zm0 0c2.5 0 5-1.5 5-3.5A2.5 2.5 0 0 0 14.5 1C12 1 12 4.5 12 7Z"/></svg>
+        </div>
+      </div>
+
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="rewards-note" id="rewardsNote">2 more sessions until your free treatment.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking reveal">
+    <p class="eyebrow center">Next Visit</p>
+    <h2 class="center">Book your appointment</h2>
+
+    <div class="booking-panel">
+
+      <div class="booking-col">
+        <h3>1. Select a service</h3>
+        <select class="service-select" id="serviceSelect">
+          <option>Brazilian Lymphatic Drainage — 60 min</option>
+          <option>Body Sculpting &amp; Anti-Cellulite Massage — 60 min</option>
+          <option>Post-Op Lymphatic Drainage — 60 min</option>
+          <option>Facial Sculpting &amp; Buccal Massage — 60 min</option>
+          <option>Full Body + Face Lymphatic Drainage — 90 min</option>
+        </select>
+
+        <h3>2. Choose a date</h3>
+        <div class="calendar" id="calendar">
+          <div class="cal-head">
+            <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&#8249;</button>
+            <span class="cal-month" id="calMonth">Month Year</span>
+            <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&#8250;</button>
+          </div>
+          <div class="cal-weekdays">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+      </div>
+
+      <div class="booking-col">
+        <h3>3. Choose a time</h3>
+        <div class="time-grid" id="timeGrid">
+          <button type="button" class="time-slot" disabled>9:00 AM</button>
+          <button type="button" class="time-slot" disabled>10:30 AM</button>
+          <button type="button" class="time-slot" disabled>12:00 PM</button>
+          <button type="button" class="time-slot" disabled>1:30 PM</button>
+          <button type="button" class="time-slot" disabled>3:00 PM</button>
+          <button type="button" class="time-slot" disabled>4:30 PM</button>
+        </div>
+        <p class="time-hint" id="timeHint">Pick a date first to see available times.</p>
+
+        <div class="booking-summary" id="bookingSummary">
+          <p class="summary-label">Your appointment</p>
+          <p class="summary-line" id="summaryService">—</p>
+          <p class="summary-line" id="summaryWhen">—</p>
+        </div>
+
+        <button type="button" class="btn btn-mauve booking-confirm" id="confirmBtn" disabled>Confirm Booking</button>
+      </div>
+
+    </div>
+
+    <div class="booking-success" id="bookingSuccess">
+      <svg viewBox="0 0 48 48" width="52" height="52" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.6"/><path d="M15 24.5 21 30.5 33.5 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>You're booked!</h3>
+      <p id="successDetail">See you soon.</p>
+      <button type="button" class="btn btn-ghost" id="bookAgainBtn">Make Another Booking</button>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="logo-black">BodyMind</span><span class="logo-script">Zari</span></div>
+    <a href="https://instagram.com/bodymind_zari" target="_blank" rel="noopener" class="footer-ig">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+      <span>@bodymind_zari</span>
+    </a>
+    <p class="footer-location">Vancouver, BC</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Body Mind Zari. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/profile.js"></script>
+</body>
+</html>
