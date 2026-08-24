@@ -166,7 +166,7 @@ main, header, footer{ position:relative; z-index:1; }
 
 /* Portrait panel, shifted in from the right edge, circular bite on the left edge */
 .hero-portrait-panel{
-  position:absolute; top:0; right:14%; bottom:0; z-index:1;
+  position:absolute; top:0; right:calc(14% - 100px); bottom:0; z-index:1;
   width:min(46%,620px);
   display:flex; align-items:center; justify-content:center;
 }
