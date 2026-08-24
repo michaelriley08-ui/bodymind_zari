@@ -5,6 +5,35 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* Footer share button */
+  var shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) {
+    var shareLabel = shareBtn.querySelector('span');
+    var defaultLabel = shareLabel.textContent;
+    var shareUrl = window.location.href.replace(/profile\.html.*$/, '');
+
+    var resetTimer;
+    function showCopiedFeedback(){
+      shareLabel.textContent = 'Link copied!';
+      shareBtn.classList.add('is-copied');
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(function(){
+        shareLabel.textContent = defaultLabel;
+        shareBtn.classList.remove('is-copied');
+      }, 2000);
+    }
+
+    shareBtn.addEventListener('click', function(){
+      if (navigator.share) {
+        navigator.share({ title: document.title, text: 'Body Mind Zari — facial & body lymphatic therapy', url: shareUrl }).catch(function(){});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(showCopiedFeedback);
+      } else {
+        showCopiedFeedback();
+      }
+    });
+  }
+
   /* Mobile nav toggle */
   var toggle = document.getElementById('navToggle');
   var nav = document.querySelector('.site-nav');
